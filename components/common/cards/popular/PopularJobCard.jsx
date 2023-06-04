@@ -3,9 +3,11 @@ import { View, Text } from 'react-native'
 
 import styles from './popularjobcard.style'
 import { TouchableOpacity } from 'react-native-gesture-handler'
-import { Image } from 'react-native-web'
+import { Image } from 'react-native'
 import {checkImageURL} from "../../../../utils"
 const PopularJobCard = ({item, selectedJob, handleCardPress}) => {
+ 
+ 
   return (
     <TouchableOpacity
      style={styles.container(selectedJob, item)}
@@ -20,6 +22,13 @@ const PopularJobCard = ({item, selectedJob, handleCardPress}) => {
         />
       </TouchableOpacity>
       <Text style={styles.companyName} numberOfLines={1}>{item.employer_name}</Text>
+
+      <View style={styles.infoContainer}>
+        <Text style={styles.jobName(selectedJob, item)}>
+          {item.job_title}
+        </Text>
+        <Text style={styles.location}>{item.job_country}</Text>
+      </View>
     </TouchableOpacity>
   )
 }

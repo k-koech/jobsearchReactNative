@@ -16,7 +16,7 @@ export default function useFetch(endpoint, query)
         url: `https://jsearch.p.rapidapi.com/${endpoint}`,
         params: {...query },
           headers: {
-            'X-RapidAPI-Key': "23d494d9a6msh6b279f85dc007f6p15985ajsnebe9f8d9e19e",
+            'X-RapidAPI-Key': "31a809df10mshfe07963b9efd6e2p10223bjsnf17b74cb7d65",
             'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
           }
       };
